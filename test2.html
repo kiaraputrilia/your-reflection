@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Enzo Mari</title>
+  <meta name="description" content="Un designer e accademico italiano.">
+  
+<!-- 
+
+Funzione della ricerca estetica ...
+Enzo Mari 1932-
+Milano, Edizioni di Comunità 1970
+
+
+Enzo Mari
+Arturo Carlo. Quintavalle Enzo Mari 1932-
+Parma : Università di Parma, Centro studi e archivio della comunicazione 1983
+
+
+永井敬二コレクションよりエンツォ · マーリ100のプロジェット = 100 projects of Enzo Mari in the Keiji Nagai collection
+Nagai Keiji korekushon yori Entso Māri 100 no purojetto = 100 projects of Enzo Mari in the Keiji Nagai collection
+長崎県美術館; 永井敬二, 1948-; Enzo Mari 1932-; Keiji Nagai 1948-; Nagasaki-ken Bijutsukan.; 長崎県美術館; Nagasaki-ken (Japan). Bijutsukan; Nagasaki Prefectural Art Museum; Nagasaki-ken Bijutsukan; Nagasaki-ken (Japan). Bijutsukan; Nagasaki Prefectural Art Museum
+
+-->
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+
+  * {
+    margin:0;
+  }
+
+  img::selection {
+    background:none;
+  }
+
+  html, 
+  body, 
+  button {
+    font:18px arial;
+  }
+
+  button {
+    padding:14px;
+  }
+
+  main {
+    position: relative;
+    float:left;
+  }
+
+  figure {
+    position: relative;
+    float:left;
+    clear:none;
+    margin:7px 0px 0px 7px;
+  }
+
+    figcaption {
+      position: relative;
+      float:left;
+      clear:both;
+    }
+
+  img {
+    position: relative;
+    float:left;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom:1px;
+  }
+  
+  @media (max-width:700px) {
+	  
+	  html,body{
+		  font:12px arial;
+	  }
+	  
+  }
+</style>
+
+</head>
+<body>
+
+<main>
+ 
+<script>
+$(function(){
+
+  let imgs = [
+   
+   { url: "bookOne/TITLE.png", caption: "<p>Title</p>" },{ url: "https://kiaraputrilia.github.io/Core-2-Studio/A5/A5_assets/Go%20Touch%20Grass/f.jpeg", caption: "<p>Kurili, 1970</p>" },{ urlino, 1970</p>" },{ url: "https: caption: "" },    
+  ];
+  
+  function shuffle(a) {
+      var j, x, i;
+      for (i = a.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          x = a[i];
+          a[i] = a[j];
+          a[j] = x;
+      }
+      return a;
+  }
+
+  shuffle(imgs);
+
+  var width = Math.floor(Math.random()*25 + 25);
+  var i = 0;
+
+  $("main").prepend("<figure style='max-width:"+width+"%'><img src='"+imgs[i].url+"'/><figcaption>"+imgs[i].caption+"</figcaption></figure>");
+  
+  i++;
+  
+$("main").on("click",function(){
+
+   
+    var random = Math.floor(Math.random()*imgs.length),
+    	width = Math.floor(Math.random()*25 + 25),
+    	src = imgs[random];
+
+		if(i < imgs.length){
+		
+		    $("main").prepend("<figure style='max-width:"+width+"%'><img src='"+imgs[i].url+"'/><figcaption>"+imgs[i].caption+"</figcaption></figure>");
+		    i++;
+		
+		    $('img').on('dragstart', function(event) { event.preventDefault(); });
+		    
+		
+		}else{
+		       
+		       $("main").prepend("<figure style='max-width:"+width+"%'><img src='assets/last.jpg'/><figcaption></figcaption></figure>");
+		
+		}
+		
+});
+
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
+  
+
+});
+</script>
+
+</main>
