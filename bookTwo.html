@@ -13,7 +13,16 @@
 
 <style>
 
-  * {
+body {
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>😀</text></svg>") 16 0,auto; /*!emojicursor.app*/    
+}
+
+    a:hover, 
+    img:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>📸</text></svg>") 16 0, auto; /*!emojicursor.app*/
+}
+
+    * {
     margin:0;
   }
 
@@ -76,8 +85,6 @@ $(function(){
 
   let imgs = [
    
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/43.png", caption: "" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/42.png", caption: "<p>Did you notice me?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/1.png", caption: "<p>Did I become a conversation starter for you and your friends?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/2.png", caption: "<p>Did you observe me from a distance?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/3.png", caption: "<p>Did you avoid my gaze? Were you afraid?</p>" },
@@ -90,8 +97,8 @@ $(function(){
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/10.png", caption:"" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/11.png", caption: "<p>Did I make a great subject for your photo?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/12.png", caption: "<p>Did you run away? Why?</p>" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/13.png", caption: "" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/14.png", caption: "" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/13.png", caption: "<p>Yes, I heard everything you said.</p>" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/14.png", caption: "<p>You tried to take a picture? Did you post it anywhere online?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/15.png", caption: "<p>Did you look for who or what was recording you?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/16.png", caption: "<p>Do you see me through all the chaos?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/17.png", caption: "" },
@@ -102,23 +109,25 @@ $(function(){
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/22.png", caption: "<p>Did I make you uncomfortable?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/23.png", caption: "" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/24.png", caption: "" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/25.png", caption: "Did I terrify you?" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/25.png", caption: "<p>Did I terrify you?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/26.png", caption: "" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/27.png", caption: "" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/27.png", caption: "<p>Did you smile? Why did you choose to smile?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/28.png", caption: "" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/29.png", caption: "" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/30.png", caption: "" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/31.png", caption: "" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/32.png", caption: "" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/33.png", caption: "" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/34.png", caption: "" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/34.png", caption: "<p>Why did it anger you?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/35.png", caption: "<p>How long did your eyes linger?</p>" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/36.png", caption: "" },
-   { url: "https://kiaraputrilia.github.io/your-reflection/smile/37.png", caption: "" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/36.png", caption: "<p>Privacy isn't real. Privacy is an illusion. Hide your kids.</p>" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/37.png", caption: "<p>You should come closer</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/38.png", caption: "<p>Did you pose?</p>" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/39.png", caption: "" },
    { url: "https://kiaraputrilia.github.io/your-reflection/smile/40.png", caption: "<p>Did you stare back at me?</p>" },
-
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/41.png", caption: "" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/42.png", caption: "<p>Did you notice me?</p>" },
+   { url: "https://kiaraputrilia.github.io/your-reflection/smile/43.png", caption: "" },
 
   ];
   
