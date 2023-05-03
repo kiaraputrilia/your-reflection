@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Surveillance</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial Narrow', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: url('camera.png'), auto;
+      }
+
+    
+    .subheading {
+  font-size: 13px;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  line-height: 6px;
+}
+
+.content {
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    line-height: 6px;
+    margin-bottom: -30px;
+}
+
+      
+      #container {
+        display: flex;
+        height: 100vh;
+        background-color: red;
+      }
+      #left-window {
+        flex: 1;
+        overflow-y: scroll;
+        padding: 30px;
+        background-color: red;
+      }
+      #right-window {
+        flex: 1;
+        overflow-y: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+      }
+      .pdf-link {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #000;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="left-window">
+        <ul>
+            <li><a id="bookOne" class="pub-a" href=""><span class="cat-num">PART 1</span><span class="booktitle"><span class="udln">when is a selfie no longer a selfie?</span></span><span class="by">DURATION OF STUDY:</span>January 2023-ongoing</a></li>
+
+        </ul>
+        <p>test</p>
+        <p class="pdf-link" onclick="showPDF('path/to/your/pdf/file.pdf')">Click me to open PDF</p>
+        <p class="subheading">part one</p>
+        <br>
+        <p class="content">when is a selfie no longer a selfie?</p>
+      </div>
+      <div id="right-window"></div>
+    </div>
+    <script>
+      function showPDF(pdfUrl) {
+        var pdfContainer = document.getElementById('right-window');
+        pdfContainer.innerHTML = '<embed src="' + pdfUrl + '" type="application/pdf" width="80%" height="80%" />';
+      }
+    </script>
+  </body>
+</html>
