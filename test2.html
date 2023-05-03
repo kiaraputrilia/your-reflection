@@ -1,46 +1,148 @@
-<!-- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>SELF-SURVEILLANCE</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Enzo Mari</title>
+  <meta name="description" content="Un designer e accademico italiano.">
+  
+<!-- 
+
+Funzione della ricerca estetica ...
+Enzo Mari 1932-
+Milano, Edizioni di Comunità 1970
+
+
+Enzo Mari
+Arturo Carlo. Quintavalle Enzo Mari 1932-
+Parma : Università di Parma, Centro studi e archivio della comunicazione 1983
+
+
+永井敬二コレクションよりエンツォ · マーリ100のプロジェット = 100 projects of Enzo Mari in the Keiji Nagai collection
+Nagai Keiji korekushon yori Entso Māri 100 no purojetto = 100 projects of Enzo Mari in the Keiji Nagai collection
+長崎県美術館; 永井敬二, 1948-; Enzo Mari 1932-; Keiji Nagai 1948-; Nagasaki-ken Bijutsukan.; 長崎県美術館; Nagasaki-ken (Japan). Bijutsukan; Nagasaki Prefectural Art Museum; Nagasaki-ken Bijutsukan; Nagasaki-ken (Japan). Bijutsukan; Nagasaki Prefectural Art Museum
+
+-->
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+
+  * {
+    margin:0;
+  }
+
+  img::selection {
+    background:none;
+  }
+
+  html, 
+  body, 
+  button {
+    font:18px arial;
+  }
+
+  button {
+    padding:14px;
+  }
+
+  main {
+    position: relative;
+    float:left;
+  }
+
+  figure {
+    position: relative;
+    float:left;
+    clear:none;
+    margin:7px 0px 0px 7px;
+  }
+
+    figcaption {
+      position: relative;
+      float:left;
+      clear:both;
+    }
+
+  img {
+    position: relative;
+    float:left;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom:1px;
+  }
+  
+  @media (max-width:700px) {
+	  
+	  html,body{
+		  font:12px arial;
+	  }
+	  
+  }
+</style>
+
 </head>
 <body>
 
-    <a href="#" id="change-bg-link">Change Background</a>
+<main>
+ 
+<script>
+$(function(){
 
-        <h2>
-            SELF-SURVEILLANCE IN THREE PARTS
-            <br>
-            I. when is a selfie no longer a selfie?
-            <br>
-            II. SMILE! YOU'RE BEING RECORDED
-            <br>
-            III. mirroring you
-        </h1>
-        <p>I. when is a selfie no longer a selfie?</p>
-        <p>II. SMILE! YOU'RE BEING RECORDED</p>
-        <!-- <a href="camera1.html" target="popup" onclick="window.open('myFunction()','popup','width=500,height=600,scrollbars=no,resizable=no'); return false;">III. narcissus?</a> -->
-        <a href="camera1.html" target="popup" onclick="myFunction()">III. narcissus?</a>
-    </section>
+  let imgs = [
+   
+   { url: "https://enzomari.com/content/1-images/00010.jpg", caption: "<p>Dulband, 1973</p>" },{ url: "https://enzomari.com/content/1-images/00011.jpg", caption: "<p>Kurili, 1970</p>" },{ url: "https://enzomari.com/content/1-images/00012.jpg", caption: "<p>Giglio, Benbecula, Ameland, 1961–85</p>" },{ url: "https://enzomari.com/content/1-images/00013.jpg", caption: "<p>Guardare un Fotografo, 2000</p>" },{ url: "https://enzomari.com/content/1-images/00014.jpg", caption: "<p>In Attesa, Koro, 1971–77</p>" },{ url: "https://enzomari.com/content/1-images/00015.jpg", caption: "<p>Aggregato, 1974</p>" },{ url: "https://enzomari.com/content/1-images/00016.jpg", caption: "<p>Sof-Sof, Delfina, 1971–74</p>" },{ url: "https://enzomari.com/content/1-images/00017.jpg", caption: "<p>Mariolina, Arda, Seggiolina pop, 2002–2004</p>" },{ url: "https://enzomari.com/content/1-images/00018.jpg", caption: "<p>Day-night, 1971</p>" },{ url: "https://enzomari.com/content/1-images/00019.jpeg", caption: "<p>Cugino, 1975</p>" },{ url: "https://enzomari.com/content/1-images/0001.jpg", caption: "<p>Il Gioco delle Favole, 1957</p>" },{ url: "https://enzomari.com/content/1-images/0002.jpg", caption: "" },{ url: "https://enzomari.com/content/1-images/0003.jpg", caption: "" },{ url: "https://enzomari.com/content/1-images/0004.jpeg", caption: "<p>Cubo, 1959</p>" },{ url: "https://enzomari.com/content/1-images/0005.jpeg", caption: "<p>Biscuit Trifoglio, Biscuit Cicladi, Biscuit Cicladi, 1969–77</p>" },{ url: "https://enzomari.com/content/1-images/0006.jpeg", caption: "<p>Samos Model S, 1973</p>" },{ url: "https://enzomari.com/content/1-images/0007.jpeg", caption: "<p>Zani &amp; Zani, 1987</p>" },{ url: "https://enzomari.com/content/1-images/0008.jpeg", caption: "<p>Zani &amp; Zani, 1987</p>" },{ url: "https://enzomari.com/content/1-images/0009.jpeg", caption: "<p>Zani &amp; Zani, 1986–91</p>" },{ url: "https://enzomari.com/content/1-images/019.jpg", caption: "<p>Putrelle, 1958</p>" },{ url: "https://enzomari.com/content/1-images/020.jpg", caption: "<p>Putrelle, 1958</p>" },{ url: "https://enzomari.com/content/1-images/021.jpg", caption: "<p>Vassoio Rettangolare, 1961</p>" },{ url: "https://enzomari.com/content/1-images/022.jpg", caption: "<p>Vassoio Rettangolare, 1961</p>" },{ url: "https://enzomari.com/content/1-images/023.jpg", caption: "<p>Vassoio Rettangolare, 1961</p>" },{ url: "https://enzomari.com/content/1-images/024.jpg", caption: "<p>Vassoio Quadrato, 1960</p>" },{ url: "https://enzomari.com/content/1-images/025.jpg", caption: "<p>Vassoio Quadrato, 1960</p>" },{ url: "https://enzomari.com/content/1-images/026.jpg", caption: "<p>Portacarte e Portamattite, 1962</p>" },{ url: "https://enzomari.com/content/1-images/027.jpg", caption: "<p>Tagliacarte Elicoidale, 1962</p>" },{ url: "https://enzomari.com/content/1-images/028.jpg", caption: "<p>Scatole, 1960</p>" },{ url: "https://enzomari.com/content/1-images/029.jpg", caption: "<p>Scatole, 1960</p>" },{ url: "https://enzomari.com/content/1-images/030.jpg", caption: "<p>Scatole, 1960</p>" },{ url: "https://enzomari.com/content/1-images/031.jpg", caption: "<p>Tagliacarte in acciaio, 1961</p>" },{ url: "https://enzomari.com/content/1-images/032.jpg", caption: "<p>Portaritratti, 1965</p>" },{ url: "https://enzomari.com/content/1-images/033.jpg", caption: "<p>Portaritratti, 1965</p>" },{ url: "https://enzomari.com/content/1-images/034.jpg", caption: "<p>Portaritratti, 1965</p>" },{ url: "https://enzomari.com/content/1-images/035.jpg", caption: "<p>Portaritratti, 1965</p>" },{ url: "https://enzomari.com/content/1-images/036.jpg", caption: "<p>Portacarte e Portamatite di Marmo, 1960</p>" },{ url: "https://enzomari.com/content/1-images/037.jpg", caption: "<p>Servizio da Scrivania, 1960</p>" },{ url: "https://enzomari.com/content/1-images/038.jpg", caption: "<p>Il posto dei giochi, 1961</p>" },{ url: "https://enzomari.com/content/1-images/039.jpg", caption: "<p>Schizzo per <em>Libreria componible ad incastro in plastica</em> (particolare del giunto), 1966</p>" },{ url: "https://enzomari.com/content/1-images/041.jpg", caption: "<p>Vaso da fiori doppio, 1968</p>" },{ url: "https://enzomari.com/content/1-images/042.jpg", caption: "<p>Piastrelle da rivestimento componibili, 1968</p>" },{ url: "https://enzomari.com/content/1-images/043.jpg", caption: "<p>Sedia in plastica, 1971</p>" },{ url: "https://enzomari.com/content/1-images/044.jpg", caption: "<p>Cephalantus Occidentalis: serie della nature n. 9, 1970</p>" },{ url: "https://enzomari.com/content/1-images/045.jpg", caption: "<p>Schizzo per <em>Sistema di illuminazione</em>, 1974</p>" },{ url: "https://enzomari.com/content/1-images/046.jpg", caption: "<p>Tavolo Frate, 1973</p>" },{ url: "https://enzomari.com/content/1-images/047.jpg", caption: "<p>Attaccapanni in plastica e metallo, 1977</p>" },{ url: "https://enzomari.com/content/1-images/scan-000.jpeg", caption: "<p>Il Gioco delle Favole, 1957</p>" },{ url: "https://enzomari.com/content/1-images/scan-001.jpeg", caption: "<p>Caraffa Tribolata in Vetro, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-002.jpeg", caption: "<p>16 Pesci, 1973</p>" },{ url: "https://enzomari.com/content/1-images/scan-003.jpeg", caption: "" },{ url: "https://enzomari.com/content/1-images/scan-004.jpg", caption: "" },{ url: "https://enzomari.com/content/1-images/scan-005.jpeg", caption: "" },{ url: "https://enzomari.com/content/1-images/scan-10.jpeg", caption: "<p>Vasi per Fiori, 1961</p>" },{ url: "https://enzomari.com/content/1-images/scan-11-copy.jpeg", caption: "<p>Portaombrelli Portavasi, 1961</p>" },{ url: "https://enzomari.com/content/1-images/scan-11.jpeg", caption: "<p>Portaombrelli Portavasi, 1961</p>" },{ url: "https://enzomari.com/content/1-images/scan-12.jpeg", caption: "<p>Portaombrelli Portavasi, 1961</p>" },{ url: "https://enzomari.com/content/1-images/scan-13.jpg", caption: "<p>Portaombrelli, 1962</p>" },{ url: "https://enzomari.com/content/1-images/scan-14.jpeg", caption: "<p>Cestino, 1962</p>" },{ url: "https://enzomari.com/content/1-images/scan-15.jpeg", caption: "<p>Cestino, 1962</p>" },{ url: "https://enzomari.com/content/1-images/scan-16-copy-copy.jpg", caption: "<p>Attaccapanni Ecc., 1968</p>" },{ url: "https://enzomari.com/content/1-images/scan-16-copy.jpg", caption: "<p>Attaccapanni Ecc., 1968</p>" },{ url: "https://enzomari.com/content/1-images/scan-17.jpeg", caption: "<p>Attaccapanni Ecc., 1968</p>" },{ url: "https://enzomari.com/content/1-images/scan-18.jpeg", caption: "<p>Portacenere-Cestino, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-19.jpeg", caption: "<p>Portacenere-Cestino, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-1.jpeg", caption: "<p>Vaso per un Fiore, 1962</p>" },{ url: "https://enzomari.com/content/1-images/scan-20.jpeg", caption: "<p>Calendario a Bilancia, 1963</p>" },{ url: "https://enzomari.com/content/1-images/scan-21.jpeg", caption: "<p>Calendario Perpetuo a Fogli Mobili, 1963</p>" },{ url: "https://enzomari.com/content/1-images/scan-22.jpeg", caption: "<p>Calendario Perpetuo a Fogli Mobili, 1963</p>" },{ url: "https://enzomari.com/content/1-images/scan-23.jpeg", caption: "<p>Calendario Perpetuo da Tavolo, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-24-copy.jpeg", caption: "<p>Calendario Perpetuo da Tavolo, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-24.jpeg", caption: "<p>Calendario Perpetuo da Tavolo, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-25.jpeg", caption: "<p>Fruttiera, 1968</p>" },{ url: "https://enzomari.com/content/1-images/scan-26.jpeg", caption: "<p>Fruttiera, 1968</p>" },{ url: "https://enzomari.com/content/1-images/scan-27.jpeg", caption: "<p>Portavasi, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-28.jpg", caption: "<p>Portaghiaccio, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-29.jpeg", caption: "<p>Portaghiaccio, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-2.jpeg", caption: "<p>Saliera o Candeliere, 1962</p>" },{ url: "https://enzomari.com/content/1-images/scan-30.jpeg", caption: "<p>Colleoni, 1970</p>" },{ url: "https://enzomari.com/content/1-images/scan-31.jpeg", caption: "<p>Portamatite Rettangolare, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-32.jpeg", caption: "<p>Portamatite Rettangolare, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-33.jpeg", caption: "<p>Portacenere, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-34-copy.jpeg", caption: "<p>Portacenere, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-34.jpeg", caption: "<p>Portacenere, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-35.jpeg", caption: "<p>Portacenere, 1967</p>" },{ url: "https://enzomari.com/content/1-images/scan-36.jpeg", caption: "<p>Portariviste, Dischi, Libri, 1965</p>" },{ url: "https://enzomari.com/content/1-images/scan-37.jpeg", caption: "<p>Portaombrelli Liscio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-38.jpeg", caption: "<p>Portaombrelli Rocco, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-39.jpeg", caption: "<p>Trifoglio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-3.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-40.jpeg", caption: "<p>Trifoglio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-42.jpeg", caption: "<p>Vasi per Fiori, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-43.jpeg", caption: "<p>Tortiglione, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-44-copy.jpeg", caption: "<p>Tortiglione, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-44.jpeg", caption: "<p>Tortiglione, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-45.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-46-copy.jpeg", caption: "<p>Cucchiaino, 1970</p>" },{ url: "https://enzomari.com/content/1-images/scan-46.jpeg", caption: "<p>Recipiente da Tavola, 1970</p>" },{ url: "https://enzomari.com/content/1-images/scan-47-copy-2.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-47-copy-3.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-47-copy-4.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-47-copy-5.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-47-copy-6.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-47-copy-7.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-47-copy.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-47.jpeg", caption: "<p>Vaso Doppio, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-48-copy-2.jpeg", caption: "<p>Recipiente da Tavola, 1970</p>" },{ url: "https://enzomari.com/content/1-images/scan-48-copy.jpeg", caption: "<p>Recipiente da Tavola, 1970</p>" },{ url: "https://enzomari.com/content/1-images/scan-48.jpeg", caption: "<p>Recipiente da Tavola, 1970</p>" },{ url: "https://enzomari.com/content/1-images/scan-49.jpeg", caption: "<p>Recipiente da Tavola, 1970</p>" },{ url: "https://enzomari.com/content/1-images/scan-4-copy-2.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-4-copy-3.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-4-copy.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-4.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-50.jpg", caption: "<p>Ciotola Emisferica, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-51.jpeg", caption: "<p>Ciotola Emisferica, 1969</p>" },{ url: "https://enzomari.com/content/1-images/scan-5.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-6-copy-2.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-6-copy-3.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-6-copy.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-6.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-7.jpeg", caption: "<p>Marmi, 1964</p>" },{ url: "https://enzomari.com/content/1-images/scan-8.jpg", caption: "<p>Vasi per Fiori, 1961</p>" },{ url: "https://enzomari.com/content/1-images/scan-9-copy-2.jpeg", caption: "<p>Vasi per Fiori, 1961</p>" },{ url: "https://enzomari.com/content/1-images/scan-9.jpg", caption: "<p>Vasi per Fiori, 1961</p>" },{ url: "https://enzomari.com/content/1-images/scan.jpeg", caption: "<p>Servizio da Scrivania, 1960</p>" },{ url: "https://enzomari.com/content/1-images/simboli_04.jpg", caption: "" },{ url: "https://enzomari.com/content/1-images/simboli_05.jpg", caption: "" },{ url: "https://enzomari.com/content/1-images/simboli_06.jpg", caption: "" },    
+  ];
+  
+  function shuffle(a) {
+      var j, x, i;
+      for (i = a.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          x = a[i];
+          a[i] = a[j];
+          a[j] = x;
+      }
+      return a;
+  }
 
-    <script>
-        function myFunction() {
-          window.open("camera1.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=380,width=1184,height=828");
-          window.open("camera2.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=100,width=480,height=394");
-          window.open("camera3.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=600,width=1000,height=1435");
-          window.open("camera4.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=700,left=20,width=900,height=450");
-        
-        }
-    </script>
-</body>
-</html>
+  shuffle(imgs);
 
+  var width = Math.floor(Math.random()*25 + 25);
+  var i = 0;
 
-</head>
+  $("main").prepend("<figure style='max-width:"+width+"%'><img src='"+imgs[i].url+"'/><figcaption>"+imgs[i].caption+"</figcaption></figure>");
+  
+  i++;
+  
+$("main").on("click",function(){
 
+   
+    var random = Math.floor(Math.random()*imgs.length),
+    	width = Math.floor(Math.random()*25 + 25),
+    	src = imgs[random];
 
-</span></span>
-</body>
-</html> -->
+		if(i < imgs.length){
+		
+		    $("main").prepend("<figure style='max-width:"+width+"%'><img src='"+imgs[i].url+"'/><figcaption>"+imgs[i].caption+"</figcaption></figure>");
+		    i++;
+		
+		    $('img').on('dragstart', function(event) { event.preventDefault(); });
+		    
+		
+		}else{
+		       
+		       $("main").prepend("<figure style='max-width:"+width+"%'><img src='assets/last.jpg'/><figcaption></figcaption></figure>");
+		
+		}
+		
+});
+
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
+  
+
+});
+</script>
+
+</main>

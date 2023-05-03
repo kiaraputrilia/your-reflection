@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Watching You Through the Ether</title>
+        <script type="text/javascript" src="camera.js"></script>
+    </head>
+    <body>
+        <video id="webCam" autoplay playsin1ne width="800" height="600"></video>
+        <canvas id="canvas"></canvas>
+    </body>
+
+    <script>
+        const webCamElement = document.getElementById("webCam");
+        const canvasElement = document.getElementById("canvas");
+        const webcam = new Webcam(webCamElement, "user", canvasElement);
+        webcam.start();
+    </script>
+</html>
+
+
+
