@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>About</title>  
+<script src="about.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+
+<style>
+    :root {
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    }
+
+    body {
+    margin: 0;
+    height: 100vh;
+    background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
+    background-position: center center;
+    background-size: cover;
+    }
+
+    .mask {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0,0%,0%, 0.9);
+    mask: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y),
+        transparent 40px,
+        black 150px
+    );
+    -webkit-mask: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y),
+        transparent 40px,
+        black 150px
+    );
+    }
+</style>
+
+<body>
+    <div class="mask"></div>
+</body>
+
+</html>
