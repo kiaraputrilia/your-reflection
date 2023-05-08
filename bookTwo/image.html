@@ -5,6 +5,8 @@
   <style>
     html {
       background-color: black;
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>🔍</text></svg>") 16 0, auto;
+      /*!emojicursor.app*/
     }
 
     /* CSS for the image */
@@ -23,6 +25,7 @@
       min-width: 900px;
     }
 
+
     #info {
       position: absolute;
       bottom: 20px;
@@ -30,9 +33,23 @@
       color: white; /* Set text color */
       z-index: 1; /* Ensure the text is on top of the image */
     }
+
+    #home {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      z-index: 1;
+    }
+
   </style>
 </head>
 <body>
+
+  <div id="home">
+    Test
+  </div>
+
   <div id="info">
     <!-- Text content -->
     <br>NYC, April 2023.
@@ -69,6 +86,7 @@
   </script>
 </body>
 </html>
+
 
 
 <!-- <!DOCTYPE html>

@@ -319,20 +319,6 @@ p {
   -o-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
-.bgfadejazz {
-  background-color: #fff;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-.bgfadesega {
-  background-color: #f1d3cb;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
 
 /*slides    */
 #bookOne-gallery,
