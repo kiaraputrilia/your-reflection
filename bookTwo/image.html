@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html {
+        background-color: black;
+    }
+    /* CSS for the image */
+    #image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+    <a href="image2.html">
+  <img id="image" src="cover1.png">
+</a>
+
+  <script>
+    var currentScale = 15; // Initial scale factor (completely zoomed in)
+
+    window.addEventListener('wheel', function(event) {
+      event.preventDefault();
+
+      var scaleDelta = event.deltaY * -0.01; // Adjust the scaling speed here
+      var newScale = currentScale + scaleDelta;
+      var minScale = 0.01; // Adjust the minimum scale factor here
+      var maxScale = 15;
+      newScale = Math.min(Math.max(newScale, minScale), maxScale);
+
+      document.getElementById('image').style.transform = 'translate(-50%, -50%) scale(' + newScale + ')';
+
+      currentScale = newScale;
+    });
+
+    window.onload = function() {
+      // Apply the initial scale transformation (completely zoomed in)
+      document.getElementById('image').style.transform = 'translate(-50%, -50%) scale(' + currentScale + ')';
+    };
+  </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for the image */
+    #image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <img id="image" src="IMG_0112.jpg">
+
+  <script>
+    var currentScale = 1; // Initial scale factor
+
+    window.addEventListener('wheel', function(event) {
+      // Prevent default scrolling behavior
+      event.preventDefault();
+
+      // Calculate the new scale factor based on the mouse wheel movement
+      var scaleDelta = event.deltaY * -0.01; // Adjust the scaling speed here
+      var newScale = currentScale + scaleDelta;
+
+      // Limit the scale factor to a specific range (optional)
+      var minScale = 0.5;
+      var maxScale = 3;
+      newScale = Math.min(Math.max(newScale, minScale), maxScale);
+
+      // Apply the scale transformation to the image
+      document.getElementById('image').style.transform = 'translate(-50%, -50%) scale(' + newScale + ')';
+
+      // Update the current scale factor for the next wheel event
+      currentScale = newScale;
+    });
+  </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for the image */
+    #image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <img id="image" src="IMG_0112.jpg">
+
+  <script>
+    var currentScale = 3; // Initial scale factor (completely zoomed in)
+
+    window.addEventListener('wheel', function(event) {
+      event.preventDefault();
+
+      var scaleDelta = event.deltaY * -0.01; // Adjust the scaling speed here
+      var newScale = currentScale + scaleDelta;
+      var minScale = 0.5;
+      var maxScale = 3;
+      newScale = Math.min(Math.max(newScale, minScale), maxScale);
+
+      document.getElementById('image').style.transform = 'translate(-50%, -50%) scale(' + newScale + ')';
+
+      currentScale = newScale;
+    });
+
+    window.onload = function() {
+      // Apply the initial scale transformation (completely zoomed in)
+      document.getElementById('image').style.transform = 'translate(-50%, -50%) scale(' + currentScale + ')';
+    };
+  </script>
+</body>
+</html> -->

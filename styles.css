@@ -282,7 +282,7 @@ p {
   display: visible;
 }
 
-#bookOne:hover {
+/* #bookOne:hover {
   color: #e6e3dd;
 }
 #bookTwo:hover {
@@ -290,7 +290,7 @@ p {
 }
 #bookThree:hover {
   color: #e6e3dd;
-}
+} */
 
 #library-img,
 #bookOne-img,

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html {
+        background-color: black;
+    }
+    /* CSS for the image */
+    #image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+    <a href="https://kiaraputrilia.github.io/your-reflection/bookTwo.html">
+  <img id="image" src="cover3.png">
+</a>
+
+  <script>
+    var currentScale = 15; // Initial scale factor (completely zoomed in)
+
+    window.addEventListener('wheel', function(event) {
+      event.preventDefault();
+
+      var scaleDelta = event.deltaY * -0.01; // Adjust the scaling speed here
+      var newScale = currentScale + scaleDelta;
+      var minScale = 0.01; // Adjust the minimum scale factor here
+      var maxScale = 15;
+      newScale = Math.min(Math.max(newScale, minScale), maxScale);
+
+      document.getElementById('image').style.transform = 'translate(-50%, -50%) scale(' + newScale + ')';
+
+      currentScale = newScale;
+    });
+
+    window.onload = function() {
+      // Apply the initial scale transformation (completely zoomed in)
+      document.getElementById('image').style.transform = 'translate(-50%, -50%) scale(' + currentScale + ')';
+    };
+  </script>
+</body>
+</html>
