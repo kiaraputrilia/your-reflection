@@ -104,7 +104,7 @@ body {
   line-height: 1;
 }
 
-body {
+/* body {
   background-image: url('background.mov');
 }
 
@@ -115,7 +115,7 @@ h4,
 h5,
 h6 {
   font-family: 'ITC Benguiat Std', sans-serif;
-}
+} */
 
 ol,
 ul {
@@ -157,7 +157,7 @@ a {
   color: #fff;
 }
 
-/* Titles -------------------------------------------------------------------->*/
+/* Titles -------------------------------------------------------------------->
 
 .highlight {
 	color: rgb(100,70,255);
@@ -180,7 +180,7 @@ svg {
 	position: fixed; 
 	top: 0; 
 	left: 0; 
-}
+} */
 
 
 #pub-ul {
