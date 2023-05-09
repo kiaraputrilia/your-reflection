@@ -10,7 +10,7 @@
             img {
               display: block;
               margin: 0 auto;
-              max-width: 75%;
+              max-width: 70%;
               height: auto;
               margin: 20px auto 0;
             }
@@ -26,9 +26,25 @@
         cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>🤳🏽</text></svg>") 16 0, auto;
     }
 
+    #home {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      z-index: 1;
+    }
+
+    #home a {
+      color: black; /* Set link color */
+      text-decoration: underline; /* Add underline */
+    }
+
           </style>
     </head>
     <body>	
+        <div id="home">
+            <a href=https://kiaraputrilia.github.io/your-reflection/index.html>Home</a>
+        </div>
             <img src="bookOne/TITLE.png" alt="Image" id="image" onclick="changeImage()" />
             <script>
                 var images = ["bookOne/TITLE.png", "bookOne/ABOUT.png", "bookOne/TOC.png", "bookOne/6-7.png", "bookOne/8-9.png", "bookOne/10-11.png", "bookOne/12-13.png", "bookOne/14-15.png", "bookOne/16-17.png", "bookOne/18-19.png", "bookOne/20.png", "bookOne/21-22.png", "bookOne/23-24.png", "bookOne/25-26.png", "bookOne/27-28.png", "bookOne/29-30.png", "bookOne/31-32.png", "bookOne/33.png", "bookOne/34-35.png", "bookOne/36-37.png", "bookOne/38-39.png", "bookOne/40-41.png", "bookOne/42-43.png", "bookOne/44-45.png", "bookOne/blank.png", "bookOne/46-47.png", "bookOne/48-49.png", "bookOne/50-51.png", "bookOne/52.png"];
@@ -42,8 +58,7 @@
                 }
                 // setInterval(changeImage, 3000); // calls changeImage every 3 seconds
               </script>
-          </body>
-        </html>
+         
 
 
     <div id="info">
@@ -53,6 +68,6 @@
         <br> Zip tied.
         <br>
         This collection is continuously evolving <a href="https://www.are.na/kiara-putrilia/when-is-a-selfie-no-longer-a-selfie">online.</a> Developed through <a href="https://print.are.na/book/when-is-a-selfie-no-longer-a-selfie?author=false&source=false&description=true&toc=true&isShare=false&reverse=true">print.are.na</a>!
-
         </div>
-
+    </body>
+    </html>
